@@ -1,0 +1,12 @@
+/**
+ * EstoqueBOPortType.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package com.fiap.inventario;
+
+public interface EstoqueBOPortType extends java.rmi.Remote {
+    public com.fiap.inventario.to.xsd.ProdutoTO consultarProduto(java.lang.Integer codigo) throws java.rmi.RemoteException;
+}

@@ -1,0 +1,33 @@
+package com.fiap.inventario;
+
+import java.util.Scanner;
+
+import org.apache.axis2.AxisFault;
+
+import com.fiap.inventario.EstoqueBOStub.ConsultarProduto;
+
+public class TerminalConsulta {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			EstoqueBOStub stub = new EstoqueBOStub();
+			ConsultarProduto params = new ConsultarProduto(); // metodo para acessar 
+			System.out.println("Digie o codigo do produto");
+			params.setCodigo(sc.nextInt());
+			
+			stub.consultarProduto(params);
+			
+			
+		} catch (Exception e) { // trata as duas exceçoes ao mesmo tempo
+			
+			e.printStackTrace();
+		}
+		
+		sc.close();
+
+	}
+
+}

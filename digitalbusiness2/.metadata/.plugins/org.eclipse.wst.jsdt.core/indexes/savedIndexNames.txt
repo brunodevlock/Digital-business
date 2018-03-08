@@ -1,0 +1,3 @@
+INDEX VERSION 1.4+D:\digitalbusiness2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3011022148.index
+1341593008.index

@@ -1,0 +1,12 @@
+package com.fiap.inventario;
+
+public class ListarView {
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

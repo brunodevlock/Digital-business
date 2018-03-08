@@ -1,0 +1,22 @@
+package com.fiap.inventario;
+
+import org.apache.axis2.AxisFault;
+
+public class ListarView {
+
+	public static void main(String[] args) {
+		
+		try {
+			EstoqueBOStub stub = new EstoqueBOStub();
+			Listar params = new Listar();
+			ListarResponse resp = stub.listar(params);
+			stub.listar(params);
+		} catch (Exception e) {
+			
+			System.err.println(e.getMessage());
+		}
+		
+
+	}
+
+}

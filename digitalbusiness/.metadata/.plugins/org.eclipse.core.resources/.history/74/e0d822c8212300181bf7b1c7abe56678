@@ -1,0 +1,12 @@
+package com.fiap.inventario;
+
+public class TerminalConsulta {
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

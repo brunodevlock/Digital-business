@@ -1,0 +1,54 @@
+package com.fiap.inventario;
+
+public class EstoqueBOPortTypeProxy implements com.fiap.inventario.EstoqueBOPortType {
+  private String _endpoint = null;
+  private com.fiap.inventario.EstoqueBOPortType estoqueBOPortType = null;
+  
+  public EstoqueBOPortTypeProxy() {
+    _initEstoqueBOPortTypeProxy();
+  }
+  
+  public EstoqueBOPortTypeProxy(String endpoint) {
+    _endpoint = endpoint;
+    _initEstoqueBOPortTypeProxy();
+  }
+  
+  private void _initEstoqueBOPortTypeProxy() {
+    try {
+      estoqueBOPortType = (new com.fiap.inventario.EstoqueBOLocator()).getEstoqueBOHttpSoap11Endpoint();
+      if (estoqueBOPortType != null) {
+        if (_endpoint != null)
+          ((javax.xml.rpc.Stub)estoqueBOPortType)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+        else
+          _endpoint = (String)((javax.xml.rpc.Stub)estoqueBOPortType)._getProperty("javax.xml.rpc.service.endpoint.address");
+      }
+      
+    }
+    catch (javax.xml.rpc.ServiceException serviceException) {}
+  }
+  
+  public String getEndpoint() {
+    return _endpoint;
+  }
+  
+  public void setEndpoint(String endpoint) {
+    _endpoint = endpoint;
+    if (estoqueBOPortType != null)
+      ((javax.xml.rpc.Stub)estoqueBOPortType)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+    
+  }
+  
+  public com.fiap.inventario.EstoqueBOPortType getEstoqueBOPortType() {
+    if (estoqueBOPortType == null)
+      _initEstoqueBOPortTypeProxy();
+    return estoqueBOPortType;
+  }
+  
+  public com.fiap.inventario.to.xsd.ProdutoTO consultarProduto(java.lang.Integer codigo) throws java.rmi.RemoteException{
+    if (estoqueBOPortType == null)
+      _initEstoqueBOPortTypeProxy();
+    return estoqueBOPortType.consultarProduto(codigo);
+  }
+  
+  
+}

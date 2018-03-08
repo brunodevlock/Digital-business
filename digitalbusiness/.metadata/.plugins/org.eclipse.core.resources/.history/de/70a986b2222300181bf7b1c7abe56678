@@ -1,0 +1,25 @@
+package com.fiap.inventario;
+
+import java.util.Scanner;
+
+import org.apache.axis2.AxisFault;
+
+public class TerminalConsulta {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			EstoqueBOStub stub = new EstoqueBOStub();
+			
+		} catch (AxisFault e) {
+			
+			e.printStackTrace();
+		}
+		
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.fiap.inventario;
+
+import java.util.Scanner;
+
+public class TerminalConsulta {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+
+	}
+
+}
