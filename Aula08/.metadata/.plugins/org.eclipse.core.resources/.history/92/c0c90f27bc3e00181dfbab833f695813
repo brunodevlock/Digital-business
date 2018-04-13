@@ -1,0 +1,12 @@
+package br.com.fiap.jsf.bean;
+
+import javax.faces.bean.ManagedBean;
+
+import br.com.fiap.ws.to.Produto;
+
+@ManagedBean
+public class ProdutoBean {
+	
+	private Produto produto;
+
+}

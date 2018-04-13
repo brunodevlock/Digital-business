@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-i18n-fr.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/catalina-tribes.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/catalina-ha.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/jasper.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-coyote.jar"/>
+  <path value="C:/Users/logonrm/.m2/repository/com/sun/faces/jsf-api/2.2.14/jsf-api-2.2.14.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-websocket.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/servlet-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-i18n-es.jar"/>
+  <path value="/10-JSF/WebContent/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="10-JSF"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-util-scan.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/ecj-4.6.3.jar"/>
+  <path value="C:/Users/logonrm/.m2/repository/com/sun/faces/jsf-impl/2.2.14/jsf-impl-2.2.14.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/html_basic.tld" project="10-JSF"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/jsf_core.tld" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.tld" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="10-JSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="10-JSF"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Opensource/Tomcat 9.0/lib/catalina-ant.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/jasper-el.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/annotations-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/catalina-storeconfig.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-jdbc.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/jaspic-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-util.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-dbcp.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/tomcat-jni.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/el-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/jsp-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/websocket-api.jar"/>
+  <path value="C:/Opensource/Tomcat 9.0/lib/catalina.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="26" name="%0" offset="479" path="%1"/>
+   <linked-el length="20" name="%0" offset="429" path="%1"/>
+   <linked-el length="26" name="%2" offset="479" path="%1"/>
+   <linked-el length="20" name="%2" offset="429" path="%1"/>
+   <linked-el length="22" name="%3" offset="725" path="%4"/>
+   <linked-el length="22" name="%3" offset="652" path="%4"/>
+   <linked-el length="22" name="%3" offset="541" path="%4"/>
+   <linked-el length="22" name="%5" offset="725" path="%4"/>
+   <linked-el length="22" name="%5" offset="652" path="%4"/>
+   <linked-el length="22" name="%5" offset="541" path="%4"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/10-JSF/WebContent/index.xhtml" value="%1"/>
+  <alias path="/10-JSF/src/br/com/fiap/jsf/bean/IndexBean.java" value="%0"/>
+  <alias path="indexBean" value="%2"/>
+  <alias path="indexBean1" value="%3"/>
+  <alias path="/10-JSF/src/br/com/fiap/jsf/bean/IndexBean1.java" value="%5"/>
+  <alias path="/10-JSF/WebContent/index1.xhtml" value="%4"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

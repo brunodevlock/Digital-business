@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+<h:head>
+	<title>Exercício 1 - Login e Senha</title>
+
+</h:head>
+<h:body>
+	<h1>Exercício 1 - Login e Senha</h1>
+	<h:form>
+		<h:inputText value="#{indexBean.login}" />
+		<h:commandButton action="#{indexBean1.logar}" value="Login" />
+	</h:form>
+	<h:form>
+		<h:inputText value="#{indexBean.senha}" />
+		<h:commandButton action="#{indexBean1.logar}" value="Senha" />
+	</h:form>
+	<h:button>
+		<h1>Entrar</h1>	
+	</h:button>
+</h:body>
+
+	<ui:composition template="">
+	</ui:composition>
+</html>
