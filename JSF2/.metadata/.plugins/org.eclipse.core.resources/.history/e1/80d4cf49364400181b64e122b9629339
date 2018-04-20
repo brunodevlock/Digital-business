@@ -1,0 +1,90 @@
+package br.com.fiap.jsf.bean;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
+import br.com.fiap.ws.service.ProdutoService;
+import br.com.fiap.ws.to.Produto;
+
+@ManagedBean
+public class ProdutoBean {
+
+	private Produto produto;
+	
+	private ProdutoService service;
+	
+	//Método que é acionado quando a tela é criada
+	@PostConstruct
+	private void init() {
+		produto = new Produto();
+		service = new ProdutoService();
+	}
+	
+	
+	//Método apra o clique do botão excluir
+	public void excluir(int codigo) {
+		
+		FacesMessage msg;
+		try {
+			service.remover(codigo);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			msg = new FacesMessage("Erro ao remover");
+		}
+	}
+	
+	
+	
+	
+	//Método para enviar a lista de produto para a tela 
+	public List<Produto> getProdutos(){
+		try {
+			return service.listar();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
+	
+	//Método para o clique do botão salvar
+	public String salvar() {
+		FacesMessage msg;
+		try {
+			//Verificar se deve cadastrar ou atualizar
+			if (produto.getCodigo() == 0) {  //precisa ser 0 porque é int ou seja é primitivo (então vale como null)
+			service.cadastrar(produto);
+			msg = new FacesMessage("cadastrado com sucesso");
+			}else {
+				service.atualizar(produto);
+				msg = new FacesMessage("Atualizado com sucesso!");
+				return "lista-produtos"; //Retorna a listagem
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			msg = new FacesMessage("Erro ao cadastrar, tente mais tarde");
+		}
+		//Adicionar a mensagem para a tela exibi-la
+		FacesContext.getCurrentInstance().addMessage(null, msg);
+		return "produto";
+		
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+	
+}

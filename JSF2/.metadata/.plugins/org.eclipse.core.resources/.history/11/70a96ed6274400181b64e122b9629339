@@ -1,0 +1,44 @@
+package br.com.fiap.jsf.bean;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+
+import br.com.fiap.ws.service.ProdutoService;
+import br.com.fiap.ws.to.Produto;
+
+@ManagedBean
+public class ProdutoBean {
+
+	private Produto produto;
+	
+	private ProdutoService service;
+	
+	//Método que é acionado quando a tela é criada
+	@PostConstruct
+	private void init() {
+		produto = new Produto();
+		service = new ProdutoService();
+	}
+	
+	//Método para o clique do botão salvar
+	public void salvar() {
+		FacesMessage msg;
+		try {
+			service.cadastrar(produto);
+			msg = new FacesMessage("cadastrado com sucesso")
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+	
+}
