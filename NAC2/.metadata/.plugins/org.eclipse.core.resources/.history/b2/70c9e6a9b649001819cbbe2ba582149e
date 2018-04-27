@@ -1,0 +1,58 @@
+package br.com.fiap.ws.service;
+
+import javax.ws.rs.core.MediaType;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+import br.com.fiap.ws.to.Bebida;
+
+public class BebidaService {
+	
+	private Client client = Client.create();
+	
+	private static final String URL ="htttp://localhost:8080/11-WS-JSF-Padaria-Client/rest/bebida/";
+			
+	private List<Bebida> list(){
+		
+	}
+	
+	public List<Bebida> list() throws Exception{
+
+		WebResource resource = client.resource(URL);
+
+		ClientResponse response = resource
+				//Formato de dados que será enviado ao ws
+				.type(MediaType.APPLICATION_JSON)
+				//Faz um POST enviando os dados
+				.post(ClientResponse.class, bebida);
+
+		//Valida se cadastrou HTTP Status 201 created
+		if(response.getStatus() != 201) {
+			throw new Exception("Erro: "  + response.getStatus());
+		}
+
+	}
+		
+
+		
+	
+	
+	public void cadastrar(Bebida bebida) throws Exception{
+		WebResource resource = client.resource(URL);
+		
+		ClientResponse response = resource
+				//Formato de dados que será enviado ao ws
+				.type(MediaType.APPLICATION_JSON)
+				//Faz um POST enviando os dados
+				.post(ClientResponse.class, bebida);
+				
+		//Valida se cadastrou HTTP Status 201 created
+		if(response.getStatus() != 201) {
+			throw new Exception("Erro: "  + response.getStatus());
+		}
+		
+	}
+
+}

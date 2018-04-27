@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;br.com.fiap.ws.entity&apos; to &apos;11-WS-JSF-Padaria-Client/src&apos;&#x0D;&#x0A;- Original project: &apos;09-WS-Restful-Padaria-Server&apos;&#x0D;&#x0A;- Destination element: &apos;11-WS-JSF-Padaria-Client/src&apos;&#x0D;&#x0A;- Original element: &apos;09-WS-Restful-Padaria-Server/src/br.com.fiap.ws.entity&apos;" description="Copy package" destination="=11-WS-JSF-Padaria-Client/src" element1="/src&lt;br.com.fiap.ws.entity" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1524788803048" version="1.0"/>
+</session>

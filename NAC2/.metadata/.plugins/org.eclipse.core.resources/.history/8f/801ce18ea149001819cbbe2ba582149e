@@ -1,0 +1,11 @@
+package br.com.fiap.ws.resource;
+
+import javax.ws.rs.Path;
+
+@Path("/bebida")
+public class BebidaResource {
+
+	
+	//...
+	
+}

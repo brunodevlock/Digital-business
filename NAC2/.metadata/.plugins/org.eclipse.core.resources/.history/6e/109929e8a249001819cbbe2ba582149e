@@ -1,0 +1,17 @@
+package br.com.fiap.ws.resource;
+
+import javax.ws.rs.Path;
+
+import br.com.fiap.ws.dao.BebidaDAO;
+
+@Path("/bebida")
+public class BebidaResource {
+	
+	private BebidaDAO dao;
+	
+	
+
+	
+	//...
+	
+}

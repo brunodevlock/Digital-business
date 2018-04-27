@@ -1,0 +1,37 @@
+package br.com.fiap.ws.resource;
+
+import javax.persistence.EntityManager;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import br.com.fiap.ws.dao.BebidaDAO;
+import br.com.fiap.ws.dao.impl.BebidaDAOImpl;
+import br.com.fiap.ws.entity.Bebida;
+import br.com.fiap.ws.singleton.EntityManagerFactorySingleton;
+
+@Path("/bebida")
+public class BebidaResource {
+	
+	private BebidaDAO dao;
+	
+	//Contrutor que inicializa o BebidaDAO
+	public BebidaResource() {
+		EntityManager em = EntityManagerFactorySingleton
+				.getInstance().createEntityManager();
+		dao = new BebidaDAOImpl(em);
+	}
+	
+	@GET
+	@Path("{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Bebida pesquisar(@PathParam("id") int codigo) {
+		return dao.pesquisar(codigo)
+	}
+
+	
+	
+	
+}
